@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{center}
+\Large MAIS 202 Project Proposal
+
+\normalsize (Deliverable 1)
+
+Annika Snow Hamer
+
+2021-10-26
+\end{center}
+
+\section{Introduction}
+
+The project will explore reinforcement learning (RL) and its potential applications to flight, for educational purposes. An RL agent will be trained to fly the X-Plane Mobile app's tutorial ``Landing in the Cessna 172'', a simple VFR landing tutorial which provides a score based on the pilot's performance.\footnote{For more details, consult \url{https://www.x-plane.com/tutorials/landing-cessna-172/}.}
+
+\section{Dataset}
+
+All data will be provided by the X-Plane mobile app, a simple flight simulator developed for mobile devices. The mobile app was selected over the desktop simulator, as the desktop version does not provide tutorials with scoring. The agent will be provided with all data visible on the screen of a virtual device (state), and will be allowed to actuate the controls (action).
+
+Given that this is a simple reinforcement learning project, there is notably no split between training, testing, and validation data.
+
+\section{Methodology}
+
+Given that the agent will be trained in a virtual setting, the input data is easily accessible (with the caveat that the screen graphics will have to be pulled from an emulator or virtual machine). An environment object will be constructed that defines a method which takes in the actions of the agent and returns the next state and reward. The pixels on the screen of a virtual mobile device will constitute the state, and may be subject to various data augmentation measures. The score within the game will be the reward. The primary metric of the agent's performance will be its ability to maximize the reward.
+
+\section{Application}
+
+The project will be presented in a report published to a personal website (domain TBD). The report will provide details on the project, as well as a video of the agent in action. The source code will be made available under a permissive license.
+
+\end{document}
